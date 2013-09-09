@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	metadata-complete="false" version="3.0">
+	<!-- NOTE! metadata-complete=true above makes webserver ignore any annotations! -->
+
+	<!-- "Manual rest" -->
+	<servlet>
+		<servlet-name>customerServlet</servlet-name>
+		<servlet-class>se.umejug.web.CustomerRestServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>customerServlet</servlet-name>
+		<url-pattern>/customer/*</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
