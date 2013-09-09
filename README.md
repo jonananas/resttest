@@ -6,3 +6,10 @@ Maven-based project as base for testing different REST-implementations in variou
 - JAX-RS REST with JUnit. (No integration tests)
 
 War intended for deploy on JBoss 7
+
+To use:
+git clone https://github.com/jonananas/resttest.git
+cd resttest
+mvn test
+
+You should end up with BUILD SUCCESS :)
