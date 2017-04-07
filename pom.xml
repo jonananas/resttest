@@ -20,14 +20,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-	<pluginRepositories>
-		<pluginRepository>
-			<id>zt-repo</id>
-			<name>Zero turnaround repo</name>
-			<url>dav:http://repos.zeroturnaround.com/maven2</url>
-		</pluginRepository>
-	</pluginRepositories>
-
 	<dependencies>
 		<!-- Include the JBoss' Java EE 6 APIs -->
 		<!-- JBoss distributes a complete set of Java EE 6 APIs including a Bill 
@@ -371,11 +363,6 @@
 						</archive> </configuration> -->
 				</plugin>
 				<plugin>
-					<groupId>org.zeroturnaround</groupId>
-					<artifactId>jrebel-maven-plugin</artifactId>
-					<version>1.1.1</version>
-				</plugin>
-				<plugin>
 					<artifactId>maven-javadoc-plugin</artifactId>
 					<version>2.7</version>
 				</plugin>
@@ -508,19 +495,6 @@
 			<plugin>
 				<artifactId>maven-antrun-plugin</artifactId>
 				<!--<version>1.6</version> -->
-			</plugin>
-			<plugin>
-				<groupId>org.zeroturnaround</groupId>
-				<artifactId>jrebel-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>generate-rebel-xml</id>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

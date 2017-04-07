@@ -15,9 +15,8 @@ public class CustomerWebTest extends WebTestBase {
 	}
 
 	@Test
-	@Ignore
 	public void customerShouldReturnCustomer() throws Exception {
-		String url = "rest/customer";
+		String url = "customer";
 		browser.get(baseUrl + url);
 		String pageSource = browser.getPageSource();
 		assertThat(pageSource).contains("OK");
